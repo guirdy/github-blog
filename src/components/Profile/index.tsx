@@ -18,17 +18,16 @@ import {
 } from './styles'
 
 export function Profile() {
-  const githubUser = useContext(GithubContext)
-  console.log(githubUser)
+  const githubContext = useContext(GithubContext)
 
   return (
     <Card>
-      <img src={githubUser.avatar_url} alt="github user" />
+      <img src={githubContext.githubUser.avatar_url} alt="github user" />
       <UserContainer>
         <HeaderContainer>
-          <h1>{githubUser.name}</h1>
+          <h1>{githubContext.githubUser.name}</h1>
           <a
-            href={githubUser.html_url}
+            href={githubContext.githubUser.html_url}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -36,22 +35,22 @@ export function Profile() {
           </a>
         </HeaderContainer>
         <BodyContainer>
-          <p>{githubUser.bio}</p>
+          <p>{githubContext.githubUser.bio}</p>
         </BodyContainer>
         <Social>
           <IconContent>
             <FaGithub />
-            <span>{githubUser.login}</span>
+            <span>{githubContext.githubUser.login}</span>
           </IconContent>
-          {githubUser.company && (
+          {githubContext.githubUser.company && (
             <IconContent>
               <FaBuilding />
-              <span>{githubUser.company}</span>
+              <span>{githubContext.githubUser.company}</span>
             </IconContent>
           )}
           <IconContent>
             <FaUserFriends />
-            <span>{githubUser.followers} seguidores</span>
+            <span>{githubContext.githubUser.followers} seguidores</span>
           </IconContent>
         </Social>
       </UserContainer>

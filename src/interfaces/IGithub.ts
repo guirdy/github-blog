@@ -17,3 +17,10 @@ export interface IGithubProfile {
   public_gists: number
   public_repos: number
 }
+
+export interface IGithubIssue {
+  title: string
+  body: string
+  html_url: string
+  user: IGithubProfile
+}
