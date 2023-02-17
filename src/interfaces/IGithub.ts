@@ -22,5 +22,6 @@ export interface IGithubIssue {
   title: string
   body: string
   html_url: string
+  created_at: string
   user: IGithubProfile
 }
