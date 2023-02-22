@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const Card = styled.header`
-  display: flex;
-  justify-content: start;
+export const IssueHeader = styled.div`
   margin: -80px auto 72px;
   background: ${(props) => props.theme['base-profile']};
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
@@ -10,26 +8,15 @@ export const Card = styled.header`
   padding: 32px 40px;
   gap: 32px;
 
-  img {
-    width: 148px;
-    height: 148px;
-    border-radius: 8px;
-  }
-
-  @media (max-width: 550px) {
-    flex-direction: column;
-
-    > img {
-      margin: auto;
-    }
+  > h1 {
+    font-size: 1.5rem;
+    line-height: 130%;
+    margin-top: 20px;
+    color: ${(props) => props.theme['base-title']};
   }
 `
 
-export const UserContainer = styled.div`
-  width: 100%;
-`
-
-export const HeaderContainer = styled.div`
+export const Navigate = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,16 +45,11 @@ export const HeaderContainer = styled.div`
   }
 `
 
-export const BodyContainer = styled.div`
-  line-height: 160%;
-  font-size: 1rem;
-  margin-bottom: 24px;
-`
-
-export const Social = styled.div`
+export const GithubUserData = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 8px;
   gap: 24px;
 `
 
@@ -79,5 +61,13 @@ export const IconContent = styled.div`
   > svg {
     font-size: 1.125rem;
     color: ${(props) => props.theme['base-label']};
+  }
+`
+
+export const IssueBody = styled.div`
+  margin-bottom: 128px;
+
+  li {
+    margin-left: 35px;
   }
 `

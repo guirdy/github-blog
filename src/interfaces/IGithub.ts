@@ -19,9 +19,12 @@ export interface IGithubProfile {
 }
 
 export interface IGithubIssue {
+  id: number
+  number: number
   title: string
   body: string
   html_url: string
   created_at: string
+  comments: number
   user: IGithubProfile
 }

@@ -34,7 +34,7 @@ export function Issues() {
 
       <IssuesItems>
         {filteredIssues.map((issue) => (
-          <IssuesCard key={issue.title} to={`${issue.html_url}`}>
+          <IssuesCard key={issue.title} to={`/post/${issue.number}`}>
             <CardHeader>
               <strong>{issue.title}</strong>
               <span>

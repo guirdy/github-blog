@@ -20,7 +20,7 @@ export function GithubProvider({ children }: GithubProfileProps) {
 
   const getGithubUserData = async () => {
     const res = await api
-      .get<IGithubProfile>('users/diego3g')
+      .get<IGithubProfile>('users/guirdy')
       .then(({ data }) => {
         return data
       })
@@ -30,7 +30,7 @@ export function GithubProvider({ children }: GithubProfileProps) {
 
   const getGithubRepositoryIssue = async () => {
     const res = await api
-      .get<IGithubIssue[]>('repos/diego3g/faladev/issues')
+      .get<IGithubIssue[]>('repos/guirdy/github-blog/issues')
       .then(({ data }) => {
         return data
       })
