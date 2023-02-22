@@ -18,6 +18,7 @@ import {
   IconContent,
   GithubUserData,
 } from './styles'
+import Loading from '../../components/Loading'
 
 export function Post() {
   const githubContext = useContext(GithubContext)
@@ -30,7 +31,7 @@ export function Post() {
   )
 
   if (!currentIssue || !githubContext.githubUser) {
-    return <h1>Carregando</h1>
+    return <Loading />
   }
 
   return (
